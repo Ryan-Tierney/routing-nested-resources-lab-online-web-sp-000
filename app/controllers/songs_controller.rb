@@ -8,7 +8,7 @@ class SongsController < ApplicationController
       @songs = Artist.songs
       end 
     else 
-      @songs = Songs.all
+      @songs = Song.all
     end
   end
 
