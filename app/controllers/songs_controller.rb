@@ -5,8 +5,10 @@ class SongsController < ApplicationController
       if Artist.nil?
         redirect to songs_path :alert = "Artist not found"
       else
-      @songs = Artist.songs 
-      redirect to songs_path
+      @songs = Artist.songs
+      end 
+    else 
+      @songs = Songs.all
     end
   end
 
